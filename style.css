@@ -1,0 +1,398 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;/*зовнішні відступи*/
+  font-family: "Inter", sans-serif;
+  color: #292929;
+  font-size: 16px;
+  line-height: 140%;
+}
+/* #region main */
+.main{
+  padding: 120px;
+  background-color: white;
+}
+@media (max-width: 1024px) {
+  .main{
+    padding: 72px;
+  }
+}
+@media (max-width: 576px) {
+  .main{
+    padding: 20px;
+  }
+}
+/* #region header */
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 64px 120px;
+  background-image: url(images/Headphones.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1024px) {
+  .header{
+    padding: 64px 72px;
+    background-image: url(images/smallPhon.png);
+  }
+}
+@media (max-width: 576px) {
+  .header{
+    padding: 32px 20px;
+    background-position: 0 0;
+  }
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+}
+.header__title{
+  margin-top: 40px;
+  margin-bottom: 0px;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+}
+@media (max-width: 1024px) {
+  .header__title{
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__title{
+    font-size: 32px;
+    margin-top: 20px;
+  }
+}
+.photo_wave{
+  width: 64px;
+  height: 76px;
+}
+@media (max-width: 576px) {
+  .photo_wave{
+    width: 32px;
+    height: 38px;
+  }
+}
+/* #endregion*/
+/* #region menu */
+.menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 500ms;
+
+  height: 100vh;
+  background-color: #E8EFF9;
+  box-sizing: border-box;
+  padding: 64px 120px;
+}
+@media (max-width: 1024px) {
+  .menu{
+    padding: 64px 72px;
+  }
+}
+@media (max-width: 576px) {
+  .menu{
+    padding: 32px 20px;
+  }
+}
+.menu_icon{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+@media (max-width: 576px) {
+  .menu_icon{
+    margin-bottom: 36px;
+  }
+}
+.menu:target{
+  transform: translateX(0%);
+}
+.menu__photo:hover{
+  transition: opacity 1.3s ease;
+  content: url(browseProducts/Icon-Burger-menu-hover.png);
+}
+/* #endregion */
+/* #region nav */
+.nav{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.nav__link{
+  color: #292929;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.nav__link:hover{
+  text-decoration: underline;
+  border: 1px;
+  text-underline-offset: 8px;
+}
+/* #endregion */
+/* #region recommended */
+.recommended{
+  margin-bottom: 120px;
+}
+.recommended__title{
+  margin-top: 0;
+  margin-bottom: 64px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -1.5px;
+}
+@media(max-width: 1024px){
+  .recommended__title{
+    font-size: 40px;
+  }
+}
+@media(max-width: 576px){
+  .recommended__title{
+    font-size: 32px;
+  }
+}
+.recommended__products{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.recommended__products.show{
+  animation: ani 2.5s forwards;
+}
+
+@keyframes ani{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@media(max-width: 1024px){
+  .recommended__products{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media(max-width: 576px){
+  .recommended__products{
+    align-items: stretch;
+  }
+}
+.product{
+  flex-basis: 324px;
+}
+.product__photo{
+  width: 100%;
+  margin-bottom: 32px;
+}
+.product__title{
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.product__category{
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.product__price{
+  margin-top: 0;
+  font-weight: 700;
+}
+/* #endregion */
+/* #region categories */
+.categories{
+  max-width: 1020px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+.categories_title{
+  margin-top: 0;
+  margin-bottom: 64px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -1.5px;
+}
+.category__title{
+    font-size: 24px;
+  }
+  @media(max-width: 1024px){
+  .categories_title{
+    font-size: 40px;
+  }
+}
+@media(max-width: 576px){
+  .categories_title{
+    font-size: 32px;
+  }
+}
+@media(max-width: 576px){
+  .category__title{
+    font-size: 16px;
+  }
+}
+.category{
+  margin-bottom: 64px;
+}
+@media(max-width: 576px){
+  .category{
+    margin-bottom: 40px;
+  }
+}
+.category__photo{
+  display: flex;
+  gap: 3%;
+  margin-bottom: 16px;
+}
+.photo-wide{
+  width: 65%;
+}
+.photo-square{
+  width: 32%;
+}
+
+@media(max-width: 576px){
+  .photo-wide{
+  width: 48%;
+  object-fit: cover;
+}
+.photo-square{
+  width: 48%;
+  object-fit: cover;
+}
+}
+/* #endregion */
+/* #region howtobuy */
+.howtobuy{
+  display: flex;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+@media(max-width: 576px){
+  .howtobuy{
+    flex-direction: column;
+  }
+}
+.howtobuy_title{
+  margin-top: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+  flex-basis: 50%;
+}
+@media(max-width: 1024px){
+  .howtobuy_title{
+    font-size: 40px;
+  }
+}
+@media(max-width: 576px){
+  .howtobuy_title{
+    font-size: 32px;
+  }
+}
+.howtobuy__content{
+  flex-basis: 50%;
+}
+.howtobuy__benefits{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  display: flex;
+  flex-direction:column ;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+/* #endregion */
+/* #endregion */
+/* #region footer */
+.footer{
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+  background-image: url(images/footer.png);
+  height: 460px;
+  background-position: center;
+  background-size: cover;
+}
+@media(max-width: 1024px){
+  .footer{
+    height: 400px;
+  }
+}
+@media(max-width: 576px){
+  .footer{
+    height: 200px;
+  }
+}
+.photo__logo{
+  height: 24px;
+  width: 190px;
+}
+@media(max-width: 576px){
+  .photo__logo{
+    height: 16px;
+    width: 127px;
+  }
+}
+/* #endregion */
+/* #region animation */
+.recommended__products
+{
+  opacity: 0;
+}
+.show{
+  animation: ani 2.5s forwards;
+}
+@keyframes ani{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.photo-square{
+  opacity: 0;
+}
+.photo-wide{
+  opacity: 0;
+}
+.square{
+  animation: squarer 2.5s forwards;
+}
+.wide{
+  animation: wide 2.5s forwards;
+}
+@keyframes squarer{
+  0% {transform: translateX(30%); opacity: 0;}
+  100% {transform: translateX(0%); opacity: 1;}
+}
+@keyframes wide{
+   0% {transform: translateX(-30%); opacity: 0;}
+  100% {transform: translateX(0%); opacity: 1;}
+}
+.howtobuy{
+  opacity: 0;
+}
+.animhowtobuy{
+  animation: animhowtobuy 2.5s forwards;
+}
+@keyframes animhowtobuy{
+  0% {transform: translateY(30%); opacity: 0;}
+  100% {transform: translateY(0%); opacity: 1;}
+}
+/* #endregion */

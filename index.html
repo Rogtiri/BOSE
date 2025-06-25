@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- мета дані сайту -->
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body id="home">
+  <!-- Структура сайту -->
+   <!-- заголовок -->
+  <header class="header" id="header">
+    <div class="header__top">
+      <img src="images/Logo.png" alt="Логотип компанії" class="photo__logo">
+        <a href="#menu">
+          <img 
+            src="images/Icon-menu.png" 
+            alt="Меню"
+            class="menu__photo"
+            >
+        </a>
+    </div>
+    <div class="header__bottom">
+      <img src="images/Sound_waves.png" alt="Звукова хвиля" class="photo_wave">
+      <h1 class="header__title">
+        The world shades.
+        <br>
+        Your music shines.
+      </h1>
+    </div>
+  </header>
+  <div class="menu" id="menu">
+    <div class="menu_icon">
+      <img src="images/Logo.png" alt="Логотип" class="photo__logo">
+      <a href="#home">
+        <img src="images/Icon-Close.png" alt="Закрити">
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="#home" class="nav__link" >HOME</a>
+      <a href="#recommended" class="nav__link" >RECOMMENDED</a>
+      <a href="#categories" class="nav__link" >CATEGORIES</a>
+      <a href="#howtobuy" class="nav__link" >HOW TO BUY</a>
+    </nav>
+  </div>
+  <!-- Основна частина -->
+  <main class="main">
+    <section class="recommended" id="recommended">
+      <h2 class="recommended__title">Recommended</h2>
+
+      <div class="recommended__products">
+        <article class="product">
+        <img
+          src="products/bose_portable.png"
+          alt="Bose portable Smart speaker"
+          class="product__photo"
+        >
+        <h3 class="product__title">Bose portable Smart speaker</h3>
+        <p class="product__category">Smart home</p>
+        <p class="product__price">$ 399.00</p>
+      </article>
+      <article class="product">
+        <img
+          src="products/soundlink_flex.png"
+          alt="SoundLink Flex Bluetooth speaker"
+          class="product__photo"
+        >
+        <h3 class="product__title">SoundLink Flex Bluetooth speaker</h3>
+        <p class="product__category">Portable bluetooth</p>
+        <p class="product__price">$ 149.00</p>
+      </article>
+      <article class="product">
+        <img
+          src="products/soundlink_color.png"
+          alt="SoundLink Color Bluetooth speaker II"
+          class="product__photo"
+        >
+        <h3 class="product__title">SoundLink Color Bluetooth speaker II</h3>
+        <p class="product__category">Portable bluetooth</p>
+        <p class="product__price">$ 129.00</p>
+      </article>
+      </div>
+    </section>
+
+     <section class="categories" id="categories">
+      <h2 class="categories_title">Browse Bose<br>products by category</h2>
+
+      <article class="category">
+        <div class="category__photo">
+          <img 
+            src="browseProducts/Vector.png" 
+            alt="Vector"
+            class="photo-wide"
+            data-animation=".wide"
+            >
+          <img 
+            src="browseProducts/headphones.png" 
+            alt="headphones"
+            class="photo-square"
+            data-animation=".square"
+            >
+        </div>
+        <h3 class="category__title">
+          Headphones & earbuds
+        </h3>
+      </article>
+
+      <article class="category">
+        <div class="category__photo">
+          <img 
+            src="browseProducts/handsColumn.png" 
+            alt="handsColumn"
+            class="photo-wide"
+            data-animation=".wide"
+            >
+          <img 
+            src="browseProducts/blueColonm.png" 
+            alt="blueColonm"
+            class="photo-square"
+            data-animation=".square"
+            >
+        </div>
+        <h3 class="category__title">
+          Speakers
+        </h3>
+      </article>
+
+      <article class="category">
+        <div class="category__photo">
+          <img 
+            src="browseProducts/manInGlasess.png" 
+            alt="manInGlasess"
+            class="photo-square"
+            data-animation=".square"
+            >
+          <img 
+            src="browseProducts/womanInGlasess.png" 
+            alt="womanInGlasess"
+            class="photo-wide"
+            data-animation=".wide"
+            >
+        </div>
+        <h3 class="category__title">
+          Audio sunglasses
+        </h3>
+      </article>
+    </section>
+
+    <section class="howtobuy" id="howtobuy">
+      <h2 class="howtobuy_title">Why buy direct<br>from Bose</h2>
+      
+      <div class="howtobuy__content">
+        <ul class="howtobuy__benefits">
+          <li>Free 2-day shipping and returns</li>
+          <li>90-day risk-free trial</li>
+          <li>World class customer service</li>
+          <li>My Bose account management</li>
+        </ul>
+        <p class="howtobuy__text">
+          A great product is more than what’s in the box. It’s a promise of premium performance, world-class support, and everything you expect from a trusted brand. It’s just one of many reasons why you’ll shop with confidence on Bose.com.
+        </p>
+      </div>
+    </section>
+  </main>
+  <!-- Нижня частина -->
+  <footer class="footer">
+    
+  </footer>
+<script src="script.js"></script>
+<script src="animate_category.js"></script>
+</body>
+</html>
